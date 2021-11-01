@@ -1,0 +1,40 @@
+$familyRegular: 'Jost', sans-serif;
+$familyThin: 'Bebas Neue';
+$familyMedium: 'Bebas Neue';
+$icomoon: 'icomoon';
+
+@font-face {
+  font-family: $familyRegular;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: $familyThin;
+  src: url('../fonts/bebasneuelight.woff');
+  src: local('bebasneuelight'), local('bebasneuelight'),
+      url('../fonts/bebasneuelight.woff') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: $familyMedium;
+  src: url('../fonts/bebasneuebold.woff');
+  src: local('bebasneuebold'), local('bebasneuebold'),
+      url('../fonts/bebasneuebold.woff') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $icomoon;
+  src:  url('../fonts/icomoon.eot?na6e8g');
+  src:  url('../fonts/icomoon.eot?na6e8g#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?na6e8g') format('truetype'),
+    url('../fonts/icomoon.woff?na6e8g') format('woff'),
+    url('../fonts/icomoon.svg?na6e8g#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

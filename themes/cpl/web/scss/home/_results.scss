@@ -1,0 +1,93 @@
+.results{
+	background: linear-gradient(0deg, #F1F1F5, #F1F1F5), #DFBE8B;
+	&-left{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 50%;
+		height: 100%;
+		padding-bottom: 70px;
+		background-image: url(../images/result/frame.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	&__content{
+		position: relative;
+		padding: 80px 0 0;
+	}
+	&__title{
+		width: 50%;
+	}
+	&__text{
+		width: 42%;
+		padding-left: 60px;
+		p{
+			margin-bottom: 20px;
+			strong{
+				color: $color-darkgray;
+			}
+		}
+	}
+	&__image{
+		position: relative;
+		top: -20px;
+	}
+	.cpl-label{
+		position: relative;
+		width: 42%;
+		margin-left: auto;
+		padding: 30px 0;
+	}
+}
+.citation{
+	text-align: right;
+	color: $color-blue;
+}
+
+@media (max-width: 1270px) {
+    .results{
+    	&__content{
+    		padding: 60px 0;
+    	}
+    	&__text{
+    		width: 50%;
+    	}
+    	&__image{
+    		top: 0;
+    	}
+    }
+}
+@media (max-width: 1000px) {
+    .results{
+    	.heading{
+    		br{
+    			display: none;
+    		}
+    	}
+    	&-left{
+    		display: none;
+    	}
+    	&__title{
+    		width: 100%;
+    	}
+    	&__text{
+    		width: 100%;
+    		margin-top: 20px;
+    		padding-left: 0;
+    	}
+    	&__image{
+    		top: 0;
+    	}
+    	.cpl-label{
+    		width: 100%;
+    		text-align: center;
+    	}
+    }
+}
+@media (max-width: 767px) {
+    .results{
+    	&__content{
+    		padding: 50px 0;
+    	}
+    }
+}

@@ -1,0 +1,95 @@
+.whatIs{
+	background-image: url(../images/2/line.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center 70px;
+	.heading{
+		span{
+			position: relative;
+			color: $color-mint;
+			&:after{
+				content: '';
+				position: absolute;
+				right: -25px;
+				top: 0;
+				width: 20px;
+				height: 21px;
+				background-image: url(../images/icon/trademark.svg);
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+	&__content{
+		width: 42%;
+	}
+	&__img{
+		width: 50%;
+		&-wrap{
+			width: 960px;
+			height: 100%;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	.btn{
+		margin-top: 45px;
+	}
+}
+
+@media (max-width: 1600px) {
+	.whatIs{
+		&__img{
+			&-wrap{
+				width: 875px;
+			}
+		}
+	}
+}
+@media (max-width: 1440px) {
+    .whatIs{
+		&__img{
+			&-wrap{
+				width: 830px;
+			}
+		}
+	}
+}
+@media (max-width: 1270px) {
+    .whatIs{
+    	&__description{
+    		br{
+    			display: none;
+    		}
+    	}
+    	&__img{
+			&-wrap{
+				width: 725px;
+			}
+		}
+    }
+}
+@media (max-width: 1000px) {
+    .whatIs{
+    	&__content{
+    		width: 100%;
+    	}
+    	&__img{
+    		width: 100%;
+    		&-wrap{
+    			width: 100%;
+    		}
+    	}
+    }
+}
+@media (max-width: 767px) {
+    .whatIs{
+    	.btn{
+    		margin-top: 30px;
+    	}
+    }
+}
+@media (max-width: 440px) {
+    
+}

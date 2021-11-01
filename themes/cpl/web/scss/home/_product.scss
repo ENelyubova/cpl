@@ -1,0 +1,143 @@
+.product{
+	padding-bottom: 60px;
+	background: linear-gradient(0deg, #F7F7FB, #F7F7FB), linear-gradient(0deg, #F1F1F5, #F1F1F5), #FFFFFF;
+	&-item{
+		width: 100%;
+		padding: 30px 0;
+		border-bottom: 1px solid $color-bordercolor;
+		&:first-child{
+			border-top: 1px solid $color-bordercolor;
+		}
+		&__name{
+			width: 16%;
+			font-weight: 500;
+			font-size: 24px;
+			color: $color-black;
+		}
+		&__image{
+			width: 32%;
+			padding: 0 10px;
+		}
+		&__price{
+			width: 20%;
+		}
+		&__cost{
+			width: 13%;
+			padding: 0 10px;
+		}
+		&__order{
+			width: 13%;
+		}
+	}
+	&-reference{
+		display: block;
+		margin-top: 40px;
+		font-weight: 500;
+		font-size: 24px;
+		color: $color-black;
+	}
+}
+.label-column{
+	display: block;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 1440px){
+	.product-item{
+		&__name{
+			width: 12%;
+			font-size: 20px;
+		}
+		&__cost{
+			width: 17%;
+		}
+	}
+	.product-reference{
+		font-size: 20px;
+	}
+}
+@media (max-width: 1270px){
+	.product-item{
+		&__name{
+			font-size: 18px;
+		}
+		.price-base{
+			font-size: 18px;
+		}
+		.price-new{
+			font-size: 26px;
+		}
+	}
+}
+@media (max-width: 1000px){
+	.product-item{
+		padding: 15px 0;
+		&__name{
+			font-size: 16px;
+		}
+		&__image{
+			width: 26%;
+		}
+		&__order{
+			width: 16%;
+		}
+		.price-base{
+			font-size: 18px;
+		}
+		.price-new{
+			font-size: 26px;
+		}
+	}
+}
+@media (max-width: 767px){
+	.product-item{
+		width: calc(100% / 3);
+		border-left: 1px solid $color-bordercolor;
+		border-right: 1px solid $color-bordercolor;
+		border-bottom: none;
+		margin: 0 -1px 0 0;
+		padding: 0 10px;
+		&:first-child{
+			border-top: none;
+		}
+		&__name{
+			width: 100%;
+			margin-bottom: 10px;
+			font-size: 16px;
+		}
+		&__image{
+			width: 100%;
+			padding: 0;
+			display: none;
+		}
+		&__price{
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		&__cost{
+			width: 100%;
+			margin-bottom: 10px;
+			padding: 0;
+		}
+		&__order{
+			width: 100%;
+			justify-content: flex-start;
+		}
+	}
+	.product-reference{
+		font-size: 16px;
+	}
+}
+@media (max-width: 500px){
+	.product-item{
+		width: 100%;
+		border-left: none;
+		border-right: none;
+		border-bottom: 1px solid $color-bordercolor;
+		margin: 0 -1px 0 0;
+		padding: 10px 0;
+		&:first-child{
+			border-top: 1px solid $color-bordercolor;
+		}
+	}
+}

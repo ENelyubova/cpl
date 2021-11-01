@@ -1,0 +1,139 @@
+.main{
+	height: 900px;
+	background: linear-gradient(0deg, #F1F1F5, #F1F1F5), #DFBE8B;
+	&-content{
+		position: relative;
+		padding-top: 170px;
+		padding-bottom: 70px;
+		height: 100%;
+		z-index: 10;
+	}
+	&__text{
+		width: 35%;
+	}
+	&__title{
+		margin-bottom: 15px;
+		@include fontF($familyMedium, 70px, 700, $color-black);
+		span{
+			position: relative;
+			color: $color-mint;
+			&:after{
+				content: '';
+				position: absolute;
+				right: -20px;
+				top: 0;
+				width: 20px;
+				height: 21px;
+				background-image: url(../images/icon/trademark.svg);
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+	.btn{
+		margin-top: 45px;
+	}
+	&__img{
+		position: relative;
+		width: 65%;
+		&:before{
+			content: '';
+			position: absolute;
+			left: 70px;
+    		top: -10px;
+			width: 27px;
+			height: 27px;
+			background-image: url(../images/icon/leaf.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+	&-right{
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 50%;
+		height: 100%;
+		padding-bottom: 70px;
+		background-image: url(../images/1/frame.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+.scroll{
+	position: relative;
+	padding-left: 45px;
+	&:before{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 25px;
+		height: 40px;
+		background-image: url(../images/icon/mouse.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
+
+@media (max-width: 1270px){
+	.main{
+		height: 800px;
+		&__title{
+			font-size: 55px;
+		}
+		&__description{
+			br{
+				display: none;
+			}
+		}
+		&__img{
+			width: 45%;
+		}
+	}
+}
+@media (max-width: 1000px){
+	.main{
+		height: auto;
+		&-content{
+			padding-top: 130px;
+			padding-bottom: 50px;
+		}
+		&__text{
+			width: 100%;
+			&-info{
+				text-align: center;
+			}
+		}
+		&__img{
+			justify-content: flex-end;
+			width: 100%;
+			margin-top: 20px;
+		}
+		&-right{
+			display: none;
+		}
+	}
+	.scroll{
+		display: none;
+	}
+}
+@media (max-width: 767px){
+	.main{
+		&__title{
+			font-size: 45px;
+		}
+		.btn{
+			margin-top: 20px;
+		}
+	}
+}
+@media (max-width: 640px){
+	.main{
+		&__title{
+			font-size: 40px;
+		}
+	}
+}
+	

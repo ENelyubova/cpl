@@ -1,0 +1,209 @@
+.catalog-view{
+    &__desc{
+        width: 50%;
+        line-height: 1.4;
+    }
+    &__docs{
+        width: 32%;
+    }
+}
+.catalog-list{
+    &__item{
+        padding: 50px 0;
+        border-top: 1px solid $color-bordercolor;
+    }
+    &__text{
+        width: calc(32% - 30px);
+        margin-right: 30px;
+        flex: 1 1 auto;
+    }
+    &__name{
+        display: block;
+        padding-bottom: 10px;
+        @include fontF($familyMedium, 29px, 700, $color-black);
+        &:hover, &:focus{
+            color: $color-green;
+        }
+    }
+    &__subname{
+        padding-bottom: 20px;
+        @include fontF($familyMedium, 16px, 500, $color-black);
+        br{
+            display: none;
+        }
+    }
+    &__btn{
+        margin-top: 25px;
+    }
+
+    &__img{
+        width: 66%;
+    }
+}
+.subcategory{
+    &__item{
+        display: block;
+        padding-bottom: 15px;
+    }
+    &__name{
+        color: $color-text;
+        &:hover, &:focus{
+            color: $color-green;
+        }
+    }
+    &__more{
+        position: relative;
+        text-decoration: underline;
+        @include fontF($familyMedium, 16px, 500, $color-black);
+        &:after{
+            content: url(../images/icon/down-black.svg);
+            position: absolute;
+            top: 50%;
+            right: -15px;
+            transform: translateY(-50%) rotate(0deg);
+            z-index: 1;
+        }
+        &.active{
+            &:after{
+                transform: translateY(-20%) rotate(180deg);
+            }
+        }
+        &:hover, &:focus{
+            color: $color-black;
+        }
+    }
+}
+
+.carousel-wrapper{
+    position: relative;
+    margin-left: auto;
+    width: 1120px;
+    overflow: hidden;
+}
+.catalog-carousel{
+    .slick-list{
+        overflow: visible;
+    }
+    .slick-track{
+        display: flex;
+        justify-content: space-between;
+        margin-left: inherit;
+    }
+    &__item{
+        position: relative;
+        margin: 0 20px;
+        width: 474px !important;
+        height: 360px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+}
+.catalog-slider{
+    width: calc(474px * 2 + 40px);
+    margin: 0 -20px;
+}
+
+.product-type{
+    width: 100%;
+}
+
+@media (min-width: 1860px){
+    .catalog-list{
+        &__name{
+            font-size: 32px;
+        }
+    }
+    .carousel-wrapper{
+        width: 1240px;
+    }
+    .catalog-slider{
+        width: calc(527px * 2 + 40px);
+    }
+    .catalog-carousel{
+        &__item{
+            width: 527px !important;
+            height: 400px;
+        }
+    }
+}
+@media (max-width: 1440px){
+    .catalog-view__desc{
+        width: 65%;
+    }
+    .catalog-list{
+        &__text{
+            width: calc(50% - 30px);
+        }
+        &__img{
+            width: 50%;
+        }
+    }
+    .carousel-wrapper{
+        width: 720px;
+    }
+}
+@media (max-width: 1000px){
+    .catalog-view{
+        &__desc{
+            width: 100%;
+            line-height: 1.2;
+        }
+        &__docs{
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+    .catalog-list{
+        &__item{
+            padding: 30px 0;
+        }
+        &__text{
+            width: 100%;
+            margin-right: 0;
+        }
+        &__name{
+            font-size: 24px;
+        }
+        &__subname{
+            p{
+                line-height: 1.2;
+            }
+            br{
+                display: none;
+            }
+        }
+        &__img{
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+    .carousel-wrapper{
+        width: 100%;
+    }
+    .catalog-carousel{
+        width: calc(100% + 20px);
+        margin: 0 -10px;
+    }
+    .catalog-carousel{
+        &__item{
+            width: 100% !important;
+            margin: 0 10px;
+            height: 260px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .catalog-list{
+        &__name{
+            font-size: 20px;
+        }
+    }
+    .catalog-carousel{
+        &__item{
+            height: auto;
+            img{
+                position: relative;
+            }
+        }
+    }
+}

@@ -1,0 +1,165 @@
+.infoCard{
+	position: relative;
+	padding: 40px 0;
+	min-height: 200px;
+	background: linear-gradient(to right, #F1C075 50%, #FFE8C5 50%);
+	overflow: hidden;
+	&__text{
+		position: relative;
+		width: 42%;
+		z-index: 10;
+	}
+	&__title{
+		@include fontF($familyMedium, 45px, 700, $color-white);
+	}
+	&__image{
+		width: 18%;
+		&-box{
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 469px;
+			height: 200px;
+		}
+	}
+	&__sale{
+		position: relative;
+		width: 40%;
+		z-index: 10;
+	}
+	&-price{
+		margin-right: 100px;
+	}
+	.btn{
+		margin: 10px 0;
+	}
+}
+.price{
+	&-base{
+		display: inline-block;
+		position: relative;
+		font-weight: 500;
+		font-size: 24px;
+		color: $color-black;
+		.fa-rub{
+			font-size: 16px;
+		}
+		&.price-old{
+			&:before{
+			    content: '';
+			    position: absolute;
+			    left: -5px;
+			    top: 50%;
+			    width: 90%;
+			    height: 2px;
+			    border-radius: 5px;
+			    background-color: #FB3141;
+			    transform: translateY(-50%) rotate(-9deg);
+			}
+		}
+	}
+	&-new{
+		font-weight: 500;
+		font-size: 45px;
+		color: $color-red;
+		.fa-rub{
+			font-size: 28px;
+		}
+	}
+}
+
+
+
+@media (max-width: 1600px) {
+	.price-new{
+		font-size: 35px;
+		.fa-rub{
+			font-size: 20px;
+		}
+	}
+}
+@media (max-width: 1440px) {
+    .infoCard{
+    	&__title{
+	    	font-size: 40px;
+	    }
+	    &-price{
+	    	margin-right: 50px;
+	    }
+    }
+    .price{
+    	&-base{
+    		font-size: 20px;
+    	}
+    	&-new{
+    		font-size: 30px;
+    	}
+    }
+}
+@media (max-width: 1270px) {
+    .infoCard{
+    	min-height: auto;
+    	&__title{
+	    	font-size: 30px;
+	    }
+	    &__image{
+	    	&-box{
+	    		width: 360px;
+	    		height: 150px;
+	    	}
+	    }
+	    &-price{
+	    	margin-right: 30px;
+	    }
+    }
+}
+@media (max-width: 1000px) {
+    .infoCard{
+    	padding: 25px 0;
+    	&__text{
+    		width: 46%;
+    	}
+    	&__title{
+	    	font-size: 24px;
+	    }
+	    &__image{
+	    	display: none;
+	    }
+	    &__sale{
+	    	width: 46%;
+	    }
+    }
+    .price{
+    	&-base{
+    		font-size: 18px;
+    	}
+    	&-new{
+    		font-size: 24px;
+    		.fa-rub{
+    			font-size: 20px;
+    		}
+    	}
+    }
+}
+@media (max-width: 767px) {
+    .infoCard{
+    	background: #F1C075;
+    	&__text{
+    		width: 100%;
+    	}
+    	&__title{
+	    	font-size: 24px;
+	    }
+	    &__sale{
+	    	width: 100%;
+	    	margin-top: 10px;
+	    }
+	    .cpl-label{
+	    	display: none;
+	    }
+    }
+}
+@media (max-width: 440px) {
+    
+}
